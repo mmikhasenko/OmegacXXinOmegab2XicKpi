@@ -3,10 +3,10 @@
 The purpose of the repository is to deponstrate application of Julia to typical problems in High-Energy physics.
 Particulatly, building parametric models, and fitting them to the data using the unbinned likelihood method.
 
-## Physics publication "Observation of excited Ω0c baryons in Ω−b→Ξ+cK−π− decays"
- - LHCb-PAPER-2021-012
+## Observation of excited Ω0c baryons in Ω−b→Ξ+cK−π− decays
+The physics analysis is resulted in the paper, that is posted on arxiv and submitted in PRL Letters journal
+ - LHCb-PAPER-2021-012: public page
  - Arxiv: [2107.03419](https://arxiv.org/abs/2107.03419)
- - Sumbitted to PRD Letters
 
 ## Analysis pipeline
 The analysis pipeline includes:

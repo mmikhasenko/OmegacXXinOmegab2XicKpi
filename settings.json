@@ -25,9 +25,9 @@
         "fKK2Kpi": 0.028,
         "f_narrow_gauss": 0.8849557522123894,
         "feeddown": {
-            "Xicp": "results\\shapes\\shape_mXicKpi_with_Xicp.txt",
-            "KK": "results\\shapes\\shape_mXicKpi_with_KmisID.txt",
-            "rho": "results\\shapes\\shape_mXicKpi_with_rho.txt"
+            "Xicp": "data/shape_mXicKpi_with_Xicp.txt",
+            "KK": "data/shape_mXicKpi_with_KmisID.txt",
+            "rho": "data/shape_mXicKpi_with_rho.txt"
         },
         "alpha_bgd": -4.17,
         "XicKpi_fitrange": [

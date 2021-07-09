@@ -1,0 +1,38 @@
+{
+    "data": {
+        "expfiles": [
+            "data/TMVA_Run1_3300.root",
+            "data/TMVA_Run2_3300.root"
+        ],
+        "exptreename": "DeltaM"
+    },
+    "XicK_fit": {
+        "blattweisskopfR": 3,
+        "fit_constraints": {
+            "Γ4": "8.7 ± 1.0",
+            "Γ1": "4.5 ± 0.6",
+            "Γ3": "3.5 ± 0.4",
+            "Γ2": "0.8 ± 0.2"
+        },
+        "XicK_fitrange": [
+            0,
+            220
+        ],
+        "orbital_momentum": 0
+    },
+    "XicKpi_fit": {
+        "σ2_over_σ1": 2.44,
+        "fKK2Kpi": 0.028,
+        "f_narrow_gauss": 0.8849557522123894,
+        "feeddown": {
+            "Xicp": "results\\shapes\\shape_mXicKpi_with_Xicp.txt",
+            "KK": "results\\shapes\\shape_mXicKpi_with_KmisID.txt",
+            "rho": "results\\shapes\\shape_mXicKpi_with_rho.txt"
+        },
+        "alpha_bgd": -4.17,
+        "XicKpi_fitrange": [
+            5.820,
+            6.400
+        ]
+    }
+}

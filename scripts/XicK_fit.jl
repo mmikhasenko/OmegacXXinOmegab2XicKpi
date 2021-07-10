@@ -223,7 +223,7 @@ writejson(joinpath("results", "default", "XicK_fit.json"), transformdictrecursiv
     Dict(
         :unconstrained_fit => Dict(
             :fixedpars => fixedpars(model_nominal),
-            :freepars => totuple(fit_nominal.measurements)
+            :freepars => fit_nominal.measurements
             ),
     ),
     ifmeasurementgivestring)

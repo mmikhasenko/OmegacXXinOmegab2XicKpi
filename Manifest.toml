@@ -8,11 +8,11 @@ version = "3.3.1"
 
 [[AlgebraPDF]]
 deps = ["ForwardDiff", "Interpolations", "LinearAlgebra", "Measurements", "Optim", "Parameters", "PyCall", "QuadGK", "Random", "RecipesBase", "StaticArrays"]
-git-tree-sha1 = "8b3adcff0a8e0a033d9a52e1177047d4d8938283"
+git-tree-sha1 = "cf3707c2ac453d23e3ef2af3bc4f200c189178cf"
 repo-rev = "master"
 repo-url = "https://github.com/mmikhasenko/AlgebraPDF.jl"
 uuid = "e09e93a3-870c-4c75-9b71-3eefe58c6e5b"
-version = "0.2.9"
+version = "0.3.1"
 
 [[ArgTools]]
 uuid = "0dad84c5-d112-42e6-8d28-ef12dabb789f"

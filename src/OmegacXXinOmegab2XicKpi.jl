@@ -1,6 +1,5 @@
 module OmegacXXinOmegab2XicKpi
 
-using Measurements: include
 using LaTeXStrings
 using Parameters
 using AlgebraPDF
@@ -18,7 +17,7 @@ include("masses.jl")
 export statesΩc, statesΩc4
 include("OmegacXXparameters.jl")
 
-export λ, pq
+export λ, pq, Φ2
 export amplitudeBWenergydep
 include("specific_lineshape.jl")
 

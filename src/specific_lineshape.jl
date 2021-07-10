@@ -45,3 +45,10 @@ Product of the break-up momenta in the three-body decay
 it gives the phase-space factor x jacobian when projecting to the m-dimension
 """ 
 pq(m,m1,m2,m3,m0) = m1+m2 < m < m0-m3 ? sqrt(λ(m^2, m1^2, m2^2)*λ(m^2, m0^2, m3^2)) / (2*m*m0) : zero(m)
+
+"""
+    Φ2(x,m1,m2)
+
+Two-body phase space factor, x->m1+m2
+""" 
+Φ2(x,m1,m2) = sqrt(λ(x^2,m1^2,m2^2))/x^2

@@ -23,7 +23,7 @@ end
 Relativistic Breit-Wigner amplitude describing an isolated elastic resonance is a system of two particles with masses `m₁` and `m₂`
 in L-wave. A Blatt-Weisskopf form-factor is used to regularize the high-energy behavior. 
 """ 
-function amplitudeBWenergydep(x, m, Γ; m1, m2, L::Int=0, R=1.5)
+function amplitudeBWenergydep(x, m, Γ; m1::Float64, m2::Float64, L::Int=0, R::Float64=1.5)
     λK = λ(x^2,m1^2,m2^2)
     λK < 0 && return zero(x)+0im
     # 

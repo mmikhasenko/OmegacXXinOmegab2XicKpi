@@ -1,4 +1,11 @@
 """
+    λ(x,y,z)
+
+Kàllën triangle function
+""" 
+λ(x,y,z) = x^2+y^2+z^2-2x*y-2y*z-2z*x
+
+"""
     BlattWeisskopfFF(pRsq, L::Int)
 
 Commonly used form-factor to regularize high-energy growth of the amplitude in `L`-wave, with `pRsq = (pR)²`
@@ -27,3 +34,14 @@ function amplitudeBWenergydep(x, m, Γ; m1, m2, L::Int=0, R=1.5)
     Γdep = Γ*p/p0*m/x*FF/FF0
     return m*Γ*sqrt(FF/FF0)/(m^2-x^2-1im*m*Γdep)
 end
+
+
+"""
+    pq(m,m1,m2,m3,m0)
+
+Product of the break-up momenta in the three-body decay
+    m0 -> m + m3
+          ↪ m1 + m2
+it gives the phase-space factor x jacobian when projecting to the m-dimension
+""" 
+pq(m,m1,m2,m3,m0) = m1+m2 < m < m0-m3 ? sqrt(λ(m^2, m1^2, m2^2)*λ(m^2, m0^2, m3^2)) / (2*m*m0) : zero(m)

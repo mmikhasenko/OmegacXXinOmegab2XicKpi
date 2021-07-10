@@ -7,7 +7,7 @@
         "exptreename": "DeltaM"
     },
     "XicK_fit": {
-        "blattweisskopfR": 3,
+        "blattweisskopfR": 3.0,
         "fit_constraints": {
             "Γ4": "8.7 ± 1.0",
             "Γ1": "4.5 ± 0.6",

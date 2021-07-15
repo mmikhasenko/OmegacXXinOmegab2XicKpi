@@ -22,6 +22,7 @@ export amplitudeBWenergydep
 include("specific_lineshape.jl")
 
 export d2nt
+export readresults
 export readjson, writejson
 export transformdictrecursively!
 export ifmeasurementgivestring, ifstringgivemeasurement

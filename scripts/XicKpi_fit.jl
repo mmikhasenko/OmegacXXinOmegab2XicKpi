@@ -64,21 +64,6 @@ using DelimitedFiles
     (xdata,)
 end
 
-# let binning = range(lims(fit1.best_model)..., length=80)
-#     stephist(data.mΞcKπ, bins=binning, lab=L"\mathrm{Data}")
-#     plot!(fit1.best_model, scaletobinneddata(binning), 300, lab=L"\mathrm{Model}", lw=2, lc=:red)
-#     # 
-#     w = scaletobinneddata(binning)
-#     plot!(fit1.best_model[1], w, 300, c=1, lab=L"\mathit{\Omega}_b^-\rightarrow\mathit{\Xi}_c^+ K^-\pi^-")
-#     plot!(fit1.best_model[2], w, 300, c=3, lab=L"\mathrm{Comb. background}")
-#     plot!(fit1.best_model[3], w, 300, c=4, lab=L"\mathit{\Omega}_b^-\rightarrow\mathit{\Xi}_c^{+}K^-\rho^-(\rightarrow\pi^-\pi^0)")
-#     plot!(fit1.best_model[4], w, 300, c=5, lab=L"\mathit{\Omega}_b^-\rightarrow\mathit{\Xi}_c^{+\prime}(\rightarrow\mathit{\Xi}_c^{+}\gamma\,)\,K^-\pi^-")
-#     plot!(fit1.best_model[5], w, 300, c=7, lab=L"\mathit{\Omega}_b^-\rightarrow\mathit{\Xi}_c^+ K^-K^-")
-#     plot!(xlim=(:auto,:auto), ylims=(0.01, Plots.ylims()[2]*1.05))
-#     bin_width = Int(round(1e3*(binning[2]-binning[1])))
-#     plot!(xlab=L_ΞcKπ, ylab=L_cand_ofXeV(bin_width, "MeV"))
-# end
-
 #                            _|            
 #    _|_|_|    _|_|      _|_|_|    _|_|    
 #  _|        _|    _|  _|    _|  _|_|_|_|  
@@ -90,8 +75,12 @@ settings = readjson("settings.json")
 @unpack feeddown = settings["XicKpi_fit"]
 XicKpi_fitrange = Tuple(settings["XicKpi_fit"]["XicKpi_fitrange"])
 @unpack f_narrow_gauss, σ2_over_σ1, alpha_bgd, fKK2Kpi = settings["XicKpi_fit"]
+
 # read data
-data = CSV.File(joinpath("data", "tnominal.csv")) |> DataFrame
+# data = CSV.File(joinpath("data", "tnominal.csv")) |> DataFrame |> d->select(d, :mΞcKπ)
+# CSV.write(joinpath("data", "XicKpi_fit.csv"), data)
+# 
+data = CSV.File(joinpath("data", "XicKpi_fit.csv")) |> DataFrame
 Nev = size(data,1)
 
 signal = Normalized(

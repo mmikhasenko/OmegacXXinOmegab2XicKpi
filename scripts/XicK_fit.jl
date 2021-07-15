@@ -39,13 +39,6 @@ end
 find_index_xi(parameters, symbol) = findfirst(x->x==symbol, collect(keys(parameters)))
 
 # 
-readresults(filename) = transformdictrecursively!(
-    readjson(joinpath("results", "default", filename)),
-    ifstringgivemeasurement)
-# 
-e2m(e) = e/1e3+(mΞc+mK)
-m2e(m) = (m-(mΞc+mK))*1e3
-
 phsp_e(e) = pq(e2m(e),mΞc,mK,mπ,mΩb)
 
 #            _|              _|      
@@ -115,8 +108,12 @@ XicK_fitrange = Tuple(settings["XicK_fit"]["XicK_fitrange"])
 twoσrange = Tuple(readresults("XicKpi_fit.json")["inferred"]["twoσrange"])
 
 # read data
-data = CSV.File(joinpath("data", "tnominal.csv")) |> DataFrame |> 
-    d->filter(x->inrange(x.mΞcKπ, twoσrange), d)
+# data = CSV.File(joinpath("data", "tnominal.csv")) |> DataFrame |> 
+#     d->filter(x->inrange(x.mΞcKπ, twoσrange), d) |> d->select(d, :eΞcK)
+# 
+# CSV.write(joinpath("data", "XicK_fit.csv"), data)
+
+data = CSV.File(joinpath("data", "XicK_fit.csv")) |> DataFrame
 Nev = size(data,1)
 
 # get parameters

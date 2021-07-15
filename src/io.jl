@@ -76,6 +76,9 @@ function ifmeasurementgivestring(x)
     return x
 end
 
+readresults(filename) = transformdictrecursively!(
+    readjson(joinpath("results", "default", filename)),
+    ifstringgivemeasurement)
 
 # dictionary to named tuple
 
